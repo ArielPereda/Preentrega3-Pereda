@@ -1,0 +1,131 @@
+.contenedorPokemon{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "titulo"
+    "texto"
+    "imagen";
+    place-items: center;
+
+    div {
+        margin-top: 55px;
+        grid-area: titulo;
+        text-align: center;
+    }
+    
+    .texto1{
+        grid-area: texto;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    aside{
+        grid-area: imagen;
+
+        img{
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    
+}
+
+@media (min-width: $minW) and (max-width: $maxW){
+    .contenedorPokemon{
+        grid-template-columns: 50% 25% 25%;
+        grid-template-rows: auto auto ;
+        grid-template-areas:
+        "titulo titulo titulo" 
+        "texto imagen imagen";
+
+        aside{
+
+            img{
+                width: 40%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: $maxW){
+
+   .contenedorPokemon{
+    grid-area: imagen;
+        aside{
+            display: flex;
+            width: 1000px;
+            height: 430px;
+
+            img{
+                width: 0px;
+                flex-grow: 1;
+                object-fit: cover;
+                opacity: .8;
+                transition: .5s ease;
+            }
+
+            img:hover{
+                cursor: crosshair;
+                width: 300px;
+                opacity: 1;
+                filter: contrast(120%);
+            }
+        }
+   }
+      
+}
+
+//se utilizo flex 
+
+.contenedorPokemon1{
+
+    div {
+        text-align: center;
+
+        h2{
+            margin-top: 55px;
+        }
+    }
+    
+    .texto1{
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .galeria1{
+        display: flex;
+        overflow-y: auto;
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        .card{
+            margin-right: 0px;
+            position: relative;
+    
+            .cuerpo-card{
+                position: absolute;
+                bottom: 0;
+                padding: 10px;
+                background-color: rgb(0, 0, 0, 0.4);
+                color: #fff;
+            }
+    
+            h5, p{
+                margin: 0;
+            }
+    
+            img{
+                width: 300px;
+                object-fit: cover;
+                height: 450px;
+                margin: 10px;
+            }
+        }
+    }
+}
+

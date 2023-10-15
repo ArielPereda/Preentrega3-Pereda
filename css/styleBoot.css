@@ -1,0 +1,11 @@
+body{
+    background-image: url(../assets/imagenes/fondo.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: azure;
+    margin: 0px;
+    margin-top: 10px;
+    min-height: 100vh;
+}

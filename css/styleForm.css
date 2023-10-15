@@ -1,0 +1,145 @@
+body{
+    background-image: url(../assets/imagenes/fondo.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: azure;
+    margin: 0px;
+    margin-top: 10px;
+    min-height: 100vh;
+
+
+}
+
+
+main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor{
+    width: 100%;
+    min-height: 10vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.barraNav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logoimg{
+    width: 50px;
+    margin: 30px o;
+    margin-right: 10px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 14px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+form{
+    padding: 50px 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+}
+
+form h2{
+    font-size: 35px;
+}
+
+.form-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-text p{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+input , textarea{
+    padding: 20px 14px;
+    margin-bottom: 25px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: black;
+}
+
+.btn{
+    background-color: rgb(221, 45, 45);
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+footer{
+    position: relative;
+    background-color: black;
+    min-height: 100%;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+.iconSocial{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.iconSocial li{
+    list-style: none;
+}
+
+.iconSocial li a{
+    font-size: 2em;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.iconSocial li a img{
+    width: 50px;
+}
+
+footer p{
+    color: red;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}

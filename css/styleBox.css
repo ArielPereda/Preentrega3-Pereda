@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url(../assets/imagenes/fondo.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: azure;
+    margin: 0px;
+    margin-top: 10px;
+    min-height: 100vh;
+}
+
+/*contenedor de toda la pagina*/
+
+#container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "container-1"
+    "container-2"
+    "container-3"
+    "container-4"
+    ;
+
+}
+
+/*contenedor 1 de la primera parte (regiones de la serie pokemon)*/
+#container-1{
+    grid-area: container-1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "titulo" 
+    "texto"
+    "imagen";
+}
+
+div h2{
+    grid-area: titulo;
+}
+
+#text-1{
+    grid-area: texto;
+    padding: 20px;
+}
+
+aside{
+    grid-area: imagen;
+}
+
+aside img{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*contenedor  de la parte de las regiones con sus iniciales*/
+#container-2 #container-3 #container-4{
+    grid-area: container-1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "titulo" 
+    "imagen"
+    "texto"
+    "titulo" 
+    "texto"
+    "imagen";
+}
+
+div h2{
+    grid-area: titulo;
+}
+
+#text-2 #text-3 #text-4{
+    grid-area: texto;
+    padding: 20px;
+}
+
+aside{
+    grid-area: imagen;
+}
+
+aside img{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1000px){
+
+    #container-1{
+        grid-area: container-1;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "titulo titulo" 
+        "texto imagen"
+        ;
+    }
+
+    #container-2 #container-3 #container-4{
+        grid-area: container-2 container-3 container-4;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+        "titulo titulo" 
+        "imagen texto"
+        "titulo titulo" 
+        "texto texto" 
+        "imagen imagen";
+    }
+
+}
+
+
+
+
+
+
